@@ -10,9 +10,9 @@ def welcome(request):
 
 def gallery_of_day(request):
     date = dt.date.today()
-    # gallery = Images.todays_gallery()
+    # gallery = images.todays_gallery()
 
-    return render(request, 'gallery/today-gallery.html', {"date": date})
+    return render(request, 'gallery/today-gallery.html', {"date": date,})
 
 def past_days_gallery(request, past_date):
     
@@ -28,6 +28,20 @@ def past_days_gallery(request, past_date):
     if date == dt.date.today():
         return redirect(gallery_of_day)
     
-    # gallery = Images.days_gallery(date)
+    # gallery = images.days_gallery(date)
 
-    return render(request, 'gallery/past-gallery.html', {"date": date})
+    return render(request, 'gallery/past-gallery.html', {"date": date,})
+
+
+def search_results(request):
+    
+    if 'Images' in request.GET and request.GET["Images"]:
+        search_term = request.GET.get("Images")
+        searched_Images = Images.search_by_title(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'gallery/search.html',{"message":message,"Images": searched_Images})
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request, 'gallery/search.html',{"message":message})

@@ -22,7 +22,9 @@ class Images(models.Model):
     title = models.CharField(max_length =30)
     post = models.CharField(max_length =30)
     editor = models.ForeignKey(Editor) 
-    pub_date = models.DateTimeField(auto_now_add=True)      
+    pub_date = models.DateTimeField(auto_now_add=True) 
+    images_image = models.ImageField(upload_to = 'images/')
+     
     
     
     @classmethod
@@ -33,4 +35,9 @@ class Images(models.Model):
     @classmethod
     def days_gallery(cls,date):
         gallery = cls.objects.filter(pub_date__date = date)
+        return gallery
+    
+    @classmethod
+    def search_by_title(cls,search_term):
+        gallery = cls.objects.filter(title__icontains=search_term)
         return gallery
