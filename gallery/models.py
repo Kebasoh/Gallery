@@ -14,16 +14,19 @@ class Editor(models.Model):
     def save_editor(self):
         self.save()
         
-    class Meta:
-        ordering = ['first_name'] 
+class tags(models.Model):
+    name = models.CharField(max_length =30)
+
+    def __str__(self):
+        return self.name     
         
         
-class Images(models.Model):
+class images(models.Model):
     title = models.CharField(max_length =30)
-    post = models.CharField(max_length =30)
+    post = models.TextField()
     editor = models.ForeignKey(Editor) 
+    tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True) 
-    images_image = models.ImageField(upload_to = 'images/')
      
     
     
@@ -41,3 +44,6 @@ class Images(models.Model):
     def search_by_title(cls,search_term):
         gallery = cls.objects.filter(title__icontains=search_term)
         return gallery
+    
+    def __str__(self):
+        return self.title[:50]

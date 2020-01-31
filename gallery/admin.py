@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Editor,Images
+from .models import Editor,images
 
 
 
 admin.site.register(Editor)
-admin.site.register(Images)
+admin.site.register(images)
