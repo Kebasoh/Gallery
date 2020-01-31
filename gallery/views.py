@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import datetime as dt
+from .models import Images
 # from django.http  import HttpResponse
 from django.http  import HttpResponse,Http404
 
@@ -9,8 +10,9 @@ def welcome(request):
 
 def gallery_of_day(request):
     date = dt.date.today()
+    # gallery = Images.todays_gallery()
 
-    return render(request, 'gallery/today-gallery.html', {"date": date,})
+    return render(request, 'gallery/today-gallery.html', {"date": date})
 
 def past_days_gallery(request, past_date):
     
@@ -25,5 +27,7 @@ def past_days_gallery(request, past_date):
 
     if date == dt.date.today():
         return redirect(gallery_of_day)
+    
+    # gallery = Images.days_gallery(date)
 
     return render(request, 'gallery/past-gallery.html', {"date": date})
