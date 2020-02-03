@@ -9,7 +9,7 @@ def welcome(request):
 
 def gallery_of_day(request):
     date = dt.date.today()
-    return render(request, 'gallery/today-gallery.html', {"date": date,})
+    return render(request, 'gallery/today-gallery.html')
 
 
 def past_days_gallery(request, past_date):
