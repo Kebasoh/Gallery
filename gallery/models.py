@@ -29,6 +29,7 @@ class Article(models.Model):
     article_image = models.ImageField(upload_to = 'articles/')
     
     
+    
     @classmethod
     def todays_gallery(cls):
         today = dt.date.today()
