@@ -15,12 +15,21 @@
 - python
 
 ## SETUP REQUIREMENTS
+- Python 3.6
+- Internet Connection
+- Run the following commands on your terminal:
+`$ git clone https://github.com/kebasoh/gallery`
+- Navigate to the folder
+ `$ cd <folder/file name>`
+- To run the application;
+ `$ python3.6 manage.py runserver`
 
 ## TESTING 
-
+- To run the tests on the application run 
 ## CONTACTS 
 - Email:ongatikebaso@gmail.com
 - Github:Kebasoh
 ## KNOWN BUGS
-- 
+- No known bugs, if you encounter any, feel free to contact us.
 ## LECENSE
+- MIT Licence (c) Gallery kenya 2020
