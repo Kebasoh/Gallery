@@ -18,16 +18,22 @@
 
 </head>
 <body>
-    {% include "navbar.html" %}
-
-    {% block content %} <h1 class='text-center'>{{date|date:"l d-F Y"}}</h1> {%endblock%}
-
-    {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     {% bootstrap_javascript %}
-    {% endblock %}
-    <!-- Footer -->
-<footer class="page-footer font-small special-color-dark pt-4" style="background-color: black;">
+  {% include "navbar.html" %}
+    <div class="steve">
+      <div class="ongati text-center">
+      <h1>STEVE'S GALLERY WEBSITE</h1>
+      <P>Welcome to steve's gallery website where all photos are gotten.</P>
+      </div>
+     </div>
+  
+  {% block content %} <h1 class='text-center'>{{date|date:"l d-F Y"}}</h1> {%endblock%}
+  
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% bootstrap_javascript %}
+  {% endblock %}
+  <!-- Footer -->
+  <footer class="page-footer font-small special-color-dark pt-4" style="background-color: black;">
 
   <!-- Footer Elements -->
   <div class="container">
