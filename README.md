@@ -9,8 +9,10 @@
 ## TECHNOLOGY USED
 - Bootstrap
 - Django
-- Python
-- 
+- css and bootstrap
+- Html
+- Database
+- python
 
 ## SETUP REQUIREMENTS
 
