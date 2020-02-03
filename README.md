@@ -7,6 +7,10 @@
 ## AUTHOR'S OF THE PROJECT
 
 ## TECHNOLOGY USED
+- Bootstrap
+- Django
+- Python
+- 
 
 ## SETUP REQUIREMENTS
 
