@@ -17,7 +17,8 @@
 ## TESTING 
 
 ## CONTACTS 
-
+- Email:ongatikebaso@gmail.com
+- Github:Kebasoh
 ## KNOWN BUGS
-
+- 
 ## LECENSE
