@@ -4,7 +4,7 @@
 - The website basically displays all the images that have been add to the website through the admin side hence displaying the on the userinterface.
 ## BDD
  <img src="static/landingpage.png">
- 
+
 ## AUTHOR'S OF THE PROJECT
 - kebaso steve ongati
 ## TECHNOLOGY USED
@@ -24,6 +24,9 @@
  `$ cd <folder/file name>`
 - To run the application;
  `$ python3.6 manage.py runserver`
+
+
+##  Github livelink
 
 ## TESTING 
 - To run the tests on the application run 
