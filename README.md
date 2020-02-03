@@ -5,7 +5,7 @@
 ## BDD
 
 ## AUTHOR'S OF THE PROJECT
-
+- kebaso steve ongati
 ## TECHNOLOGY USED
 - Bootstrap
 - Django
