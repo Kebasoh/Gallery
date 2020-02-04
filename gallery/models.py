@@ -43,7 +43,7 @@ class Article(models.Model):
     
     @classmethod
     def search_by_title(cls,search_term):
-        gallery = cls.objects.filter(title__icontains=search_term)
+        gallery = cls.objects.filter(title__icontains = search_term)
         return gallery
     
     
