@@ -25,7 +25,7 @@ def past_days_gallery(request, past_date):
         return redirect(gallery_today)
 
     gallery = Article.days_gallery(date)
-    return render(request, 'gallery/past-gallery.html',{"date": date,"gallery":gallery})
+    return render(request, 'gallery/past-gallery.html', {"date": date,"gallery":gallery})
 
 def gallery_today(request):
     date = dt.date.today()
@@ -37,10 +37,10 @@ def search_results(request):
     
     if 'article' in request.GET and request.GET["article"]:
         search_term = request.GET.get("article")
-        searched_articles = Article.search_by_title(search_term)
+        searched_articles = Article.search_by_title("car 1")
         message = f"{search_term}"
 
-        return render(request, 'gallery/search.html',{"message":message,"articles": searched_articles})
+        return render(request, 'gallery/search.html', {"message":message,"articles": searched_articles})
 
     else:
         message = "You haven't searched for any term"
