@@ -37,7 +37,7 @@ def search_results(request):
     
     if 'article' in request.GET and request.GET["article"]:
         search_term = request.GET.get("article")
-        searched_articles = '' #Article.search_by_title(search_term)
+        searched_articles = 'car 1' #Article.search_by_title(search_term)
         message = f"{search_term}"
 
         return render(request, 'gallery/search.html',{"message":message,"articles": searched_articles})
